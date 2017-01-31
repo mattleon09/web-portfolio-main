@@ -1,0 +1,221 @@
+svg {
+  margin:auto;
+  width:auto;
+  height:auto;
+ max-width: 400px;
+ max-height:400px;
+
+}
+
+
+svg polyline {
+  stroke-width: .5px;
+}
+
+svg polygon, rect, circle {
+ stroke-width: .4px;
+}
+
+g#left-leg-L, g#left-left-R, g#desk-drawer-outer-left, g#desk-drawer-outer-right {
+ stroke-dasharray: 300;
+ stroke-dashoffset: 300;
+ animation: 1s draw 1 forwards ease-in;
+}
+
+g#leftspeaker, g#rightspeaker{
+  opacity: 0;
+  transform:  translateY(88.4pt);
+   animation: popin 3s ease forwards;
+}
+
+/*g#leftspeaker rect, g#rightspeaker rect {
+  fill:white;
+}
+
+.outer-sp-cir {
+  fill:silver;
+}
+
+.inner-sp-cir {
+  fill:black;
+}*/
+
+
+g#cup-bottom {
+   opacity: 0;
+  transform:  translateY(88.4pt);
+   animation: popin 3s ease forwards;
+}
+
+g#cup-top{
+   opacity: 0;
+  transform:  translateY(88.4pt);
+   animation: popin 3s ease forwards;
+     animation-delay: 1s; 
+}
+
+/*g#cup-top rect{
+  fill:saddlebrown;
+}
+
+ g#cup-bottom polygon {
+  fill:white;
+}*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(100);
+  }
+
+  100% {
+      transform: rotate(360);
+  }
+}
+
+
+
+@keyframes popin {
+ 0% {
+   opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+g#monitor-outer {
+  opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 1s; 
+  
+}
+
+/*g#monitor-outer polygon {
+  border: 1px solid black;
+}*/
+
+g#monitor-inner {
+  opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 1.5s; 
+  
+}
+
+/*g#monitor-inner rect {
+  fill:silver;
+}*/
+
+.titlebars {
+  opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 1.75s; 
+  
+}
+
+.windows {
+  opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 2s; 
+}
+
+g#monitor-neck {
+   opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 1s;
+  
+}
+/*
+g#monitor-neck rect {
+fill:silver;
+}*/
+
+g#mouse {
+    opacity: 0;
+ animation: 1s fadein 1 forwards ease-in;
+  animation-delay: 1s; 
+  
+}
+/*g#mouse polygon {
+  fill:silver;
+}*/
+
+g#desktop-bot-left, g#desktop-top-left, g#desktop-bot-right, g#desktop-top-right {
+stroke-dasharray: 300;
+ stroke-dashoffset: 300;
+ animation: 1s draw 1 forwards ease-in;
+ 
+}
+
+
+.keys {
+   opacity: 0;
+animation: 1s fadein 1 forwards ease-in;
+ animation-delay: .5s; 
+}
+
+g#keyboard {
+   opacity: 0;
+   animation: 1s fadein 1 forwards ease-in;
+  
+  
+}
+
+/*.keys {
+  fill:silver;
+}
+
+g#keyboard rect {
+ fill:silver;
+}*/
+
+.drawer {
+  opacity: 0;
+  animation:  2s fadein 1 forwards ease-in;
+  animation-delay: .5s; 
+}
+
+
+.handle1 {
+  opacity: 0;
+  animation:  1s fadein 1 forwards ease-in;
+  animation-delay: .5s; 
+}
+
+.handle2 {
+  opacity: 0;
+  animation:  1s fadein 1 forwards ease-in;
+  animation-delay: .75s; 
+}
+
+.handle3 {
+  opacity: 0;
+  animation:  1s fadein 1 forwards ease-in;
+  animation-delay: 1s; 
+}
+
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes draw{
+  0% {
+    stroke-dashoffset: 300;
+    
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  
+  }
+}

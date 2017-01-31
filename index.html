@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans" />
+    <link href="/styles/hamburgers.css" rel="stylesheet">
+    <link href="/styles/main.css" rel="stylesheet" />
+    <link href="/styles/svg-pc.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/technology-icons.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
+    <script src="/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-controller="mainController">
+
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:black;" href="/">Matthieu Leonard</a>
+</div>
+
+
+
+<ul class="nav navbar-nav navbar-right">
+
+    <li ng-class="{active: isActive('/')}"><a href="#">Home</a></li>
+    <li ng-class="{active: isActive('/experience')}"><a href="#experience">Experience</a></li>
+    <li ng-class="{active: isActive('/education')}"><a href="#education">Education</a></li>
+    <li class="menu-button">
+        <button class="hamburger hamburger--spring" ng-click="showMenu()" type="button">
+            <span class="hamburger-box">
+                 <span class="hamburger-inner">                 
+                 </span>
+            </span>
+        </button>
+    </li>
+</ul>
+</div>
+ <ul class="relative nav navbar-nav navbar-right" ng-class="{show: isClicked }" >
+                           <li ng-class="{active: isActive('/')}"><a href="#">Home</a></li>
+                            <li ng-class="{active: isActive('/experience')}"><a href="#experience">Experience</a></li>
+                            <li ng-class="{active: isActive('/education')}"><a href="#education">Education</a></li>
+                     </ul>
+</nav>
+ 
+
+
+
+
+
+<div id="main">
+
+    <div class="page {{pageClass}}" ng-view></div>
+
+</div>
+
+</body>
+
+</html>
