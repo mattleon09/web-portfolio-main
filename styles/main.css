@@ -1,5 +1,6 @@
 body {
-    background-color: #1fb3f7;
+  /* background-color: #1fb3f7;*/
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
     }
 
+
     ul.relative.nav.navbar-nav.navbar-right {
      transition: opacity 1s ease-out;
     opacity: 0; 
@@ -26,28 +28,55 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     }
 
+
+    .navbar-default .navbar-nav>li>a {
+        color:white !important;
+    }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after      
+ {
+       background-color: white;
+       /* background-color: white !important;*/
+}
+
+
+
+
+.navbar-default .navbar-nav>li>a  {
+    color:white;
+}
+    .navbar-default .navbar-nav>.active>a{
+        background-color: #57BBE0 !important;
+        color:white !important;
+    }
+
 @media screen and (max-width:768px) {
+
 
 .navbar-header {
     width:90%;
 }
 
+
+
     ul.relative.nav.navbar-nav.navbar-right.show {
-       opacity: 1;
-    height: auto;
+       opacity: 1;  
+        height: auto;
        position: relative;
        margin-top: 43px;
        margin-left:5px;
-       background-color:white;
+      /* background-color:white;*/
 
     }
+
+   
 
 .navbar-nav {
     margin:0;
 }
 
 div.container {
-    background-color:white;
+    background-color:#0D2247;
    width:100%;
    display:inline-flex;
 }
@@ -74,17 +103,12 @@ div.container {
 }
 
 nav.navbar.navbar-default > div.container >ul.nav.navbar-nav.navbar-right > li >  a  {
-     color:black !important;
+     color:white !important;
      font-weight: bold;
 }
 
 .navbar-right {
     margin-right:15px;
-}
-
-div.container {
-    background-color:white;
-   
 }
 
 .navbar {
@@ -94,7 +118,7 @@ div.container {
 }
 
 .navbar-default {
-    background-color: white;
+    background-color: #0D2247;;
     border:none;
 }
 

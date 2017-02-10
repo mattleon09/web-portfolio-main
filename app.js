@@ -31,10 +31,14 @@ myApp.controller('mainController', function ($scope, $route) {
     $scope.showMenu = function (button) {
         var elm = button;
         if ($scope.isClicked == false) {
+              $('nav.navbar.navbar-default').addClass('grow');
             $('.hamburger').addClass('is-active');
+          
             $scope.isClicked = true;
         } else {
+                $('nav.navbar.navbar-default').removeClass('grow');
             $('.hamburger').removeClass('is-active');
+        
             $scope.isClicked = false;
         }
 
